@@ -10,7 +10,7 @@ public class AnimeLibraryService {
     private String genres;
     private String rating; // age
     private int elementsInAnimeList;
-    private ArrayList<AnimeLibraryService> animeList;
+    private static ArrayList<AnimeLibraryService> animeList;
 
     public AnimeLibraryService() {
     }
@@ -37,7 +37,7 @@ public class AnimeLibraryService {
     }
 
     public void addToAnimeLibraryService() {
-        ArrayList<AnimeLibraryService> animeList = new ArrayList<AnimeLibraryService>();
+        animeList = new ArrayList<AnimeLibraryService>();
         animeList.add(new AnimeLibraryService("Eve no Jikan (Movie)", 8.33, "Movie", 1, "Sci-Fi, Slice of Life", "PG-13"));
         animeList.add(new AnimeLibraryService("Watashi ga Motenai no wa Dou Kangaetemo Omaera ga Warui!", 7.34, "TV", 12,
                 "Comedy, School, Shounen, Slice of Life", "PG-13"));
@@ -62,7 +62,7 @@ public class AnimeLibraryService {
         animeList.add(new AnimeLibraryService("Hellsing Ultimate", 8.63, "OVA", 10,
                 "Action, Horror, Military, Seinen, Supernatural, Vampire", " R - 17+"));
         animeList.add(new AnimeLibraryService("Gintama Movie: Kanketsu-hen - Yorozuya yo Eien Nare", 9.12, "Movie", 1,
-                "Gintama Movie: Kanketsu-hen - Yorozuya yo Eien Nare", "PG-13"));
+                " Action, Comedy, Historical, Parody, Samurai, Sci-Fi, Shounen", "PG-13"));
         animeList.add(new AnimeLibraryService("Gankutsuou", 8.30, "TV", 24, "Drama, Mystery, Sci-Fi, Supernatural, Thriller",
                 "R - 17+"));
         animeList.add(new AnimeLibraryService("Detroit Metal City", 8.30, "OVA", 12, "Comedy, Music", "R - 17+"));
@@ -82,4 +82,8 @@ public class AnimeLibraryService {
    /* public void setAnimeList(ArrayList<AnimeLibraryService> animeList) {
         this.animeList = animeList;
     }*/
+   public AnimeLibraryService getAnimeByIndex(int index) {
+       return animeList.get(index);
+   }
+    // В мэйне System.out.println(library.getAnimeByIndex(recomendAnime).toString());
 }

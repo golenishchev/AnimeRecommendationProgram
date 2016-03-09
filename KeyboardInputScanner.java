@@ -10,7 +10,7 @@ public class KeyboardInputScanner {
         myWatchedTitlesCounter.setWatchedTitlesCount(dataInput.nextInt());
         switch (myWatchedTitlesCounter.getWatchedTitlesCount()) {
             case 1:
-                myRecommendation.getRandomRecomendation();
+                myRecommendation.getRandomRecommendation();
                 break;
             default:
                 System.out.println("You have a typo, try again");

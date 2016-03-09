@@ -8,7 +8,7 @@ public class Recommendation {
         System.out.println("How many anime titles have you watched?");
     }
 
-    public int getRandomRecomendation() {
+    public int getRandomRecommendation() {
         randomRecommendation = (int) (Math.random() * myAnimeLibraryService.getAnimeLibrarySize());
         return randomRecommendation;
     }
