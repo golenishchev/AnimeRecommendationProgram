@@ -14,9 +14,7 @@ public class Achivement {
         } else if (titlesCount >= 300) {
             System.out.println("New Achivement: Millionaire. You didn't pirated all this anime? =)");
         } else if (titlesCount >= 1000) {
-
-        } else {
-
+            System.out.println("New Achivement: One more life");
         }
     }
 }
