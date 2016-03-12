@@ -9,7 +9,6 @@ public class AnimeLibraryService {
     private int episodes;
     private String genres;
     private String rating; // age
-    private int elementsInAnimeList;
     private static ArrayList<AnimeLibraryService> animeList;
 
     public AnimeLibraryService() {
@@ -79,11 +78,8 @@ public class AnimeLibraryService {
     public int getAnimeLibrarySize() {
         return animeList.size();
     }
-   /* public void setAnimeList(ArrayList<AnimeLibraryService> animeList) {
-        this.animeList = animeList;
-    }*/
-   public AnimeLibraryService getAnimeByIndex(int index) {
-       return animeList.get(index);
-   }
-    // В мэйне System.out.println(library.getAnimeByIndex(recomendAnime).toString());
+
+    public AnimeLibraryService getAnimeByIndex(int index) {
+        return animeList.get(index);
+    }
 }

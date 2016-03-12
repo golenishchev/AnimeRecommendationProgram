@@ -1,7 +1,7 @@
 package com.example.anime;
 
 public class WatchedTitlesCounter {
-    private int watchedTitlesCount;
+    private static int watchedTitlesCount;
 
     public int getWatchedTitlesCount() {
         return watchedTitlesCount;

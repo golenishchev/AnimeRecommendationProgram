@@ -1,6 +1,9 @@
 package com.example.anime;
 
+import java.util.Scanner;
+
 public class Recommendation {
+    private String result;
     private int randomRecommendation;
     AnimeLibraryService myAnimeLibraryService = new AnimeLibraryService();
 
@@ -13,7 +16,21 @@ public class Recommendation {
         return randomRecommendation;
     }
 
-    public void setRandomRecommendation(int randomRecommendation) {
-        this.randomRecommendation = randomRecommendation;
+    public String animeFun(int watchedTitles) {
+        if (watchedTitles < 0) {
+            result = "Impossibru!";
+        } else if (watchedTitles == 0) {
+            result = "You are in front of point of no return =)";
+        } else if (watchedTitles > 0 && watchedTitles <= 10) {
+            result = "Tutturu~! I have some good stuff for you.";
+        } else if (watchedTitles > 300 && watchedTitles <= 1000) {
+            result = "Maybe you haven't seen this one";
+        } else if (watchedTitles >= 1000) {
+            result = "Recommend me something XD";
+        } else {
+            result = "";
+        }
+        result += "\n--- Recommended anime ---";
+        return result;
     }
 }

@@ -1,17 +1,20 @@
 package com.example.anime;
 
 public class Achivement {
-    private int titlesCount;
+    private String achivementText;
     WatchedTitlesCounter myWatchedTitlesCounter = new WatchedTitlesCounter();
-    public int getTitlesCount() {
-        return titlesCount;
-    }
-    public void setTitlesCount(int titlesCount) {
-        this.titlesCount = myWatchedTitlesCounter.getWatchedTitlesCount();;
-    }
-    public void giveAchivement() {
+
+    public void giveAchivement(int titlesCount) {
         if (titlesCount == 1) {
             System.out.println("New Achivement: First step of Otaku");
+        } else if (titlesCount >= 10) {
+            System.out.println("New Achivement: Big eyes lover");
+        } else if (titlesCount >= 100) {
+            System.out.println("New Achivement: Big -oppai- eyes lover");
+        } else if (titlesCount >= 300) {
+            System.out.println("New Achivement: Millionaire. You didn't pirated all this anime? =)");
+        } else if (titlesCount >= 1000) {
+
         } else {
 
         }
