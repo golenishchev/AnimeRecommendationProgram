@@ -1,8 +1,6 @@
 package com.example.anime;
 
 public class Achivement {
-    private String achivementText;
-    WatchedTitlesCounter myWatchedTitlesCounter = new WatchedTitlesCounter();
 
     public void giveAchivement(int titlesCount) {
         if (titlesCount == 1) {

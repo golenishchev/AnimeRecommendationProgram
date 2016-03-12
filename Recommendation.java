@@ -1,7 +1,5 @@
 package com.example.anime;
 
-import java.util.Scanner;
-
 public class Recommendation {
     private String result;
     private int randomRecommendation;
