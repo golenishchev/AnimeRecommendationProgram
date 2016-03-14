@@ -3,10 +3,12 @@ package com.example.anime;
 import java.util.Scanner;
 
 public class KeyboardInput {
-    WatchedTitlesCounter myWatchedTitlesCounter = new WatchedTitlesCounter();
+    private WatchedTitlesCounter myWatchedTitlesCounter;
+    private Scanner dataInput;
 
     public void scanTitlesCount() {
-        Scanner dataInput = new Scanner(System.in);
+        myWatchedTitlesCounter = new WatchedTitlesCounter();
+        dataInput = new Scanner(System.in); // закрыть поток
         myWatchedTitlesCounter.setWatchedTitlesCount(dataInput.nextInt());
     }
 

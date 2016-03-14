@@ -3,13 +3,14 @@ package com.example.anime;
 public class Recommendation {
     private String result;
     private int randomRecommendation;
-    AnimeLibraryService myAnimeLibraryService = new AnimeLibraryService();
+    private AnimeLibraryService myAnimeLibraryService;
 
     public void askHowManyTitlesWatched() {
         System.out.println("How many anime titles have you watched?");
     }
 
     public int getRandomRecommendation() {
+        myAnimeLibraryService = new AnimeLibraryService();
         randomRecommendation = (int) (Math.random() * myAnimeLibraryService.getAnimeLibrarySize());
         return randomRecommendation;
     }
@@ -21,7 +22,7 @@ public class Recommendation {
             result = "You are in front of point of no return =)";
         } else if (watchedTitles > 0 && watchedTitles <= 10) {
             result = "Tutturu~! I have some good stuff for you.";
-        } else if (watchedTitles > 300 && watchedTitles <= 1000) {
+        } else if (watchedTitles >= 300 && watchedTitles < 1000) {
             result = "Maybe you haven't seen this one";
         } else if (watchedTitles >= 1000) {
             result = "Recommend me something XD";
